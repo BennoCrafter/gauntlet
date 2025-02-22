@@ -51,6 +51,14 @@ pub fn create_tray() -> tray_icon::TrayIcon {
 
     let menu = Menu::with_items(&[
         &MenuItem::new("Gauntlet", false, None),
+        &MenuItem::new(
+            format!(
+                "Version {}",
+                include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/../../VERSION"))
+            ),
+            false,
+            None,
+        ),
         &MenuItem::with_id("GAUNTLET_OPEN_MAIN_WINDOW", "Open", true, None),
         &MenuItem::with_id(
             "GAUNTLET_OPEN_SETTING_WINDOW",
