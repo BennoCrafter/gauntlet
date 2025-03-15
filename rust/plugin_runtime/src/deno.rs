@@ -48,6 +48,7 @@ use crate::environment::environment_gauntlet_version;
 use crate::environment::environment_is_development;
 use crate::environment::environment_plugin_cache_dir;
 use crate::environment::environment_plugin_data_dir;
+use crate::apple_script::apple_script_run;
 use crate::events::op_plugin_get_pending_event;
 use crate::events::EventReceiver;
 use crate::events::JsEvent;
@@ -335,6 +336,9 @@ deno_core::extension!(
         environment_is_development,
         environment_plugin_data_dir,
         environment_plugin_cache_dir,
+
+        // apple script
+        apple_script_run,
     ],
     options = {
         event_receiver: EventReceiver,

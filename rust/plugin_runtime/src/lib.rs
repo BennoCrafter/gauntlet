@@ -5,6 +5,7 @@ mod component_model;
 mod deno;
 mod entrypoint_generators;
 mod environment;
+mod apple_script;
 mod events;
 mod logs;
 mod model;

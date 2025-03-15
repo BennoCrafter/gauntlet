@@ -11,6 +11,9 @@ import {
     environment_plugin_cache_dir,
     environment_plugin_data_dir
 } from "ext:core/ops";
+import {
+  apple_script_run
+} from "ext:core/ops"
 import type { FC } from "react";
 
 export function assetDataSync(path: string): ArrayBuffer {
@@ -146,3 +149,12 @@ export interface Environment {
     get pluginCacheDir(): string;
 }
 
+export const AppleScript: AppleScript = {
+  async run(script: string): Promise<string> {
+    return await apple_script_run(script)
+  }
+}
+
+export interface AppleScript {
+  run(script: string): Promise<string>;
+}

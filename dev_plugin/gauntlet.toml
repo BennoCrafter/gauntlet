@@ -51,12 +51,12 @@ A reasonably long detail description that tries to tell something usefull
 [[entrypoint.actions]]
 id = 'testAction1'
 description = "test action description 1"
-shortcut = { key = 'a', kind = 'main'}
+shortcut = { key = 'a', kind = 'main' }
 
 [[entrypoint.actions]]
 id = 'testAction2'
 description = "test action description 2"
-shortcut = { key = 'B', kind = 'main'}
+shortcut = { key = 'B', kind = 'main' }
 
 [[entrypoint.preferences]]
 id = 'testBool'
@@ -70,7 +70,10 @@ id = 'testEnum'
 name = 'Test Enum'
 type = 'enum'
 default = 'item'
-enum_values = [{ label = 'Item', value = 'item'}, { label = 'Item 2', value = 'item_2'}]
+enum_values = [
+    { label = 'Item', value = 'item' },
+    { label = 'Item 2', value = 'item_2' },
+]
 description = "test enum description"
 
 [[entrypoint.preferences]]
@@ -90,7 +93,10 @@ id = 'testListOfEnums'
 name = 'Test List of Enums'
 type = 'list_of_enums'
 description = "test list of enums description"
-enum_values = [{ label = 'Item', value = 'item'}, { label = 'Item 2', value = 'item_2'}]
+enum_values = [
+    { label = 'Item', value = 'item' },
+    { label = 'Item 2', value = 'item_2' },
+]
 
 [[entrypoint.preferences]]
 id = 'testNum'
@@ -107,8 +113,6 @@ default = 'test_value'
 description = "test string description"
 
 
-
-
 [[entrypoint]]
 id = 'form-view'
 name = 'Form view'
@@ -119,7 +123,7 @@ description = ''
 [[entrypoint.actions]]
 id = 'testAction'
 description = "test action description in form"
-shortcut = { key = ':', kind = 'main'}
+shortcut = { key = ':', kind = 'main' }
 
 [[entrypoint]]
 id = 'inline-view'
@@ -131,7 +135,7 @@ description = ''
 [[entrypoint.actions]]
 id = 'testInlineAction'
 description = "test action description 1"
-shortcut = { key = 'b', kind = 'main'}
+shortcut = { key = 'b', kind = 'main' }
 
 [[entrypoint]]
 id = 'grid-view'
@@ -192,7 +196,7 @@ description = ''
 [[entrypoint.actions]]
 id = 'testGeneratedAction1'
 description = "test action description 1"
-shortcut = { key = 'b', kind = 'main'}
+shortcut = { key = 'b', kind = 'main' }
 
 
 [[entrypoint]]
@@ -213,6 +217,13 @@ description = ''
 id = 'test-grid-focus'
 name = 'Test Grid Focus'
 path = 'src/test-grid-focus.tsx'
+type = 'view'
+description = ''
+
+[[entrypoint]]
+id = 'apple-script'
+name = 'Apple Script'
+path = 'src/apple-script.tsx'
 type = 'view'
 description = ''
 
@@ -239,7 +250,7 @@ read = [
     "{windows:user-home}\\test",
     "{windows:user-home}/test",
     "{linux:user-home}/test",
-    "/etc/test"
+    "/etc/test",
 ]
 write = ["/home/exidex/.test"]
 

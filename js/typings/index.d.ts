@@ -256,6 +256,8 @@ declare module "ext:core/ops" {
     function environment_is_development(): boolean;
     function environment_plugin_data_dir(): string;
     function environment_plugin_cache_dir(): string;
+
+    function apple_script_run(script: string): Promise<string>;
 }
 
 // component model types
